@@ -1,0 +1,247 @@
+
+
+
+.round {
+  width: 100%;
+  height: 100vh;
+  background:rgb(155, 159, 179);
+  position: relative;
+}
+
+.image {
+  display: block;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.image-item {
+  display: block;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 1.5s ease-in-out;
+}
+
+.image-picture {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.round-menu {
+  width: 300px;
+  height: 300px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 200px;
+  background:rgb(179, 155, 155);
+}
+
+.circle-navigation {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.circle {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  transition: transform .5s ease;
+  position: relative;
+  display: flex;
+  /* align-items: center; боковое расположение*/
+  justify-content: center;
+}
+
+.circle:after {
+  content: "";
+  position: absolute;
+  left: 14px; /*подбирать чтоб круг серый не катался*/
+  top: 50%;
+  transform: translateY(-50%);
+  width: 270px;
+  height: 270px;
+  border-radius: 50%;
+  border: 1px solid rgb(179, 176, 176);
+}
+
+.block {
+  /* width: 150px; боковое расположение
+  height: 50px; боковое расположение*/
+  width: 50px;
+  height: 150px;
+  /* transform-origin: 100% 26px; боковое расположение*/
+  transform-origin: 26px 100%;
+  transform: rotate(0deg);
+  position: absolute;
+  z-index: 100;
+
+  display: flex;
+  justify-content: center;
+}
+/* 
+Определяется через JS
+
+.block:nth-child(1) {
+transform: rotate(180deg);
+background: rgb(202, 24, 24);
+}
+.block:nth-child(2) {
+transform: rotate(270deg);
+background: rgb(24, 42, 202);
+}
+.block:nth-child(3) {
+transform: rotate(360deg);
+background: rgb(39, 202, 24);
+}
+.block:nth-child(4) {
+transform: rotate(450deg);
+background: rgb(155, 202, 24);
+} */
+
+.c-btn {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  background: rgb(10, 10, 10);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: rotate(0deg);
+}
+
+.block.active .c-btn {
+  background: rgb(111, 39, 184);
+  transition: all .3s ease;
+}
+
+
+.icon {
+  color: white;
+  font-size: 20px;
+  transition: transform .5s ease; /*должна равна как у circle*/
+}
+
+
+
+
+
+
+
+
+
+
+.small-circle {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background: rgb(7, 7, 7);
+  position: absolute;
+  left: 78px; /*подбирать для центра*/
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.small-circle-item {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background: rgba(5, 5, 5, 0.384);
+  position: absolute;
+  top: 0;
+  left: 0;
+  text-align: center;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  opacity: 0;
+	visibility: hidden;
+  transition: all 1.5s ease-in-out;
+}
+
+.small-circle-title {
+  color: white;
+  font-size: 18px;
+  font-weight: 700;
+  margin: 10px 0 5px 0;
+  padding: 3px;
+  max-width: 110px;
+}
+
+.small-circle-text {
+  color: white;
+  font-size: 13px;
+  font-weight: 400;
+  padding: 3px;
+  margin: 3px 0 5px 0;
+}
+
+.red {
+  background: red;
+}
+
+.blue {
+  background: blue;
+}
+
+.fadeIn {
+	animation-duration: 1.5s;
+	animation-timing-function: ease-in-out;
+}
+.fadeIn {
+	animation-name: fadeIn;
+	opacity: 1;
+	visibility: visible;
+}
+@keyframes fadeIn { 
+	0% {
+    opacity: 0;
+  }
+  25% {
+    opacity: 0.25;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity:1;
+  }
+}
+
+.show {
+  display: block
+}
+
+.hide {
+  display: none
+}
+
+/* .small-circle:nth-child(1) {
+  animation-delay: .2s;
+}
+ 
+.small-circle:nth-child(2) {
+  animation-delay: .3s;
+}
+ 
+.small-circle:nth-child(3) {
+  animation-delay: .4s;
+} */
