@@ -115,7 +115,7 @@ function showSlides(n, slides) {
 }
 
 
-function plussSlides() { //будет переключать слайды при клике
+function plussSlides() { //будет переключать слайды
     showSlides(slideIndex += 1, samllCirclItems);
 }
 
