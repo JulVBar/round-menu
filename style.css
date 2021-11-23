@@ -4,7 +4,6 @@
 .round {
   width: 100%;
   height: 100vh;
-  background:rgb(155, 159, 179);
   position: relative;
 }
 
@@ -14,12 +13,14 @@
   height: 100%;
   overflow: hidden;
   position: relative;
+  background: black;
 }
 
 .image-item {
   display: block;
+  padding: 80px 0;
   width: 100%;
-  height: 100%;
+  height: 550px;
   overflow: hidden;
   position: absolute;
   top: 0;
@@ -43,7 +44,7 @@
   top: 50%;
   transform: translateY(-50%);
   right: 200px;
-  background:rgb(179, 155, 155);
+  background: transparent;
 }
 
 .circle-navigation {
@@ -194,13 +195,8 @@ background: rgb(155, 202, 24);
   margin: 3px 0 5px 0;
 }
 
-.red {
-  background: red;
-}
 
-.blue {
-  background: blue;
-}
+
 
 .fadeIn {
 	animation-duration: 1.5s;
@@ -227,7 +223,7 @@ background: rgb(155, 202, 24);
 }
 
 .show {
-  display: block
+  display: flex;
 }
 
 .hide {
